@@ -11,25 +11,31 @@ command line:
   defaults write -g InitialKeyRepeat -int 15
   # normal minimum is 2 (30 ms)
   defaults write -g KeyRepeat -int 1 
-  
-If Error for insecure directories than run:
-sudo chmod -R 755 path/to-directory
-Example:
-sudo chmod -R 755 /Users/juridiener/.config/zsh/completion/
 
-Install Alacritty:
-brew install --cask alacritty
-brew install tmux
-brew install neovim
-brew install prettier
-brew install black
-brew install stylua
-brew install luarocks
-curl https://sh.rustup.rs -sSf | sh
-brew install fd
-brew install fzf
-brew install ripgrep
-npm install -g ls_emmet
+ZSH:
+  If Error for insecure directories than run:
+  sudo chmod -R 755 path/to-directory
+  Example:
+  sudo chmod -R 755 /Users/juridiener/.config/zsh/completion/
+
+Install:
+  brew install --cask alacritty
+  brew install tmux
+  brew install neovim
+  brew install prettier
+  brew install black
+  brew install stylua
+  brew install luarocks
+  curl https://sh.rustup.rs -sSf | sh
+  brew install fd
+  brew install fzf
+  brew install ripgrep
+  npm install -g ls_emmet
+
+
+
+TODO:
+  bufferline does not buffers, online if file is sourced
 
 
 

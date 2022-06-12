@@ -9,7 +9,7 @@ if not status_theme_ok then
 end
 
 vim.api.nvim_set_hl(0, "SLGitIcon", { fg = "#E8AB53", bg = "#303030" })
-vim.api.nvim_set_hl(0, "SLBranchName", { fg = "#D4D4D4", bg = "#303030", bold = false })
+vim.api.nvim_set_hl(0, "SLBranchName", { fg = "#d16969", bg = "#303030", bold = false })
 -- vim.api.nvim_set_hl(0, "SLProgress", { fg = "#D7BA7D", bg = "#252525" })
 vim.api.nvim_set_hl(0, "SLProgress", { fg = "#D4D4D4", bg = "#303030" })
 vim.api.nvim_set_hl(0, "SLSeparator", { fg = "#808080", bg = "#252525" })

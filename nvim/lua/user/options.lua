@@ -57,6 +57,10 @@ vim.g.loaded_node_provider = 0
 vim.g.loaded_ruby_provider = 0
 vim.g.loaded_perl_provider = 0
 
+-- nvim bookmarks
+vim.g.bookmark_save_per_working_dir = 1
+vim.g.bookmark_auto_save = 1
+
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]

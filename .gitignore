@@ -2,4 +2,6 @@
 *.session
 *.history
 */session
+.vim-bookmarks
 zsh/.zsh_sessions/
+zsh/.zsh_history
