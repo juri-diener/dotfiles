@@ -29,6 +29,7 @@ curl https://sh.rustup.rs -sSf | sh
 brew install fd
 brew install fzf
 brew install ripgrep
+npm install -g ls_emmet
 
 
 
