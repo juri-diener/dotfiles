@@ -166,6 +166,11 @@ _G.packer_plugins = {
     path = "/Users/juridiener/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
     url = "https://github.com/karb94/neoscroll.nvim"
   },
+  neovim = {
+    loaded = true,
+    path = "/Users/juridiener/.local/share/nvim/site/pack/packer/start/neovim",
+    url = "https://github.com/rose-pine/neovim"
+  },
   ["nlsp-settings.nvim"] = {
     loaded = true,
     path = "/Users/juridiener/.local/share/nvim/site/pack/packer/start/nlsp-settings.nvim",

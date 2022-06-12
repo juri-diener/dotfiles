@@ -80,21 +80,21 @@ local opts = {
 
 local m_opts = {
   mode = "n", -- NORMAL mode
-  prefix = "m",
+  prefix = "B",
   buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
   silent = true, -- use `silent` when creating keymaps
   noremap = true, -- use `noremap` when creating keymaps
   nowait = true, -- use `nowait` when creating keymaps
 }
 
-local m_mappings = {
+local B_mappings = {
   a = { "<cmd>BookmarkAnnotate<cr>", "Annotate" },
   c = { "<cmd>BookmarkClear<cr>", "Clear" },
   m = { "<cmd>BookmarkToggle<cr>", "Toggle" },
   -- h = { '<cmd>lua require("harpoon.mark").add_file()<cr>', "Harpoon" },
   j = { "<cmd>BookmarkNext<cr>", "Next" },
   k = { "<cmd>BookmarkPrev<cr>", "Prev" },
-  s = { "<cmd>BookmarkShowAll<cr>", "Prev" },
+  s = { "<cmd>BookmarkShowAll<cr>", "Show all" },
   -- s = {
   --   "<cmd>lua require('telescope').extensions.vim_bookmarks.all({ hide_filename=false, prompt_title=\"bookmarks\", shorten_path=false })<cr>",
   --   "Show",
@@ -215,11 +215,11 @@ local mappings = {
     s = { "<cmd>Telescope git_status<cr>", "Open changed file" },
     b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
     c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
-    v = { "<cmd>Telescope git_bcommits<cr>", "Checkout commit" },
-    d = {
-      "<cmd>Gitsigns diffthis HEAD<cr>",
-      "Diff",
-    },
+    v = { "<cmd>Telescope git_bcommits<cr>", "Checkout bcommit" },
+    -- d = {
+    --   "<cmd>Gitsigns diffthis HEAD<cr>",
+    --   "Diff",
+    -- },
     -- G = {
     --   name = "Gist",
     --   a = { "<cmd>Gist -b -a<cr>", "Create Anon" },
@@ -328,4 +328,4 @@ local vmappings = {
 which_key.setup(setup)
 which_key.register(mappings, opts)
 which_key.register(vmappings, vopts)
-which_key.register(m_mappings, m_opts)
+which_key.register(B_mappings, m_opts)

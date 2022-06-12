@@ -85,7 +85,7 @@ return packer.startup(function(use)
   use "folke/tokyonight.nvim"
   --use "lunarvim/colorschemes"                     -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
-  -- use "rose-pine/neovim"                         -- maybe try this colorscheme
+  use "rose-pine/neovim"                         -- maybe try this colorscheme
   -- use "rebelot/kanagawa.nvim"
 
   -- cmp plugins
