@@ -21,6 +21,15 @@ Install Alacritty:
 brew install --cask alacritty
 brew install tmux
 brew install neovim
+brew install prettier
+brew install black
+brew install stylua
+brew install luarocks
+curl https://sh.rustup.rs -sSf | sh
+brew install fd
+brew install fzf
+brew install ripgrep
+
 
 
 FOR M1 CHIPS

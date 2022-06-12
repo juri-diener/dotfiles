@@ -2,3 +2,4 @@
 *.session
 *.history
 */session
+zsh/.zsh_sessions/
