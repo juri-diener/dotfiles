@@ -37,6 +37,10 @@ local options = {
   scrolloff = 8,                           -- is one of my fav
   sidescrolloff = 8,
   guifont = "monospace:h17",               -- the font used in graphical neovim applications
+  foldlevel = 99,
+  -- foldlevelstart = 1,                      -- When entering buffer code is folded by the level 1
+  foldmethod = 'expr',
+  foldexpr = 'nvim_treesitter#foldexpr()',
 
 }
 
