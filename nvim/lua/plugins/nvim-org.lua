@@ -5,7 +5,7 @@ return {
       { "nvim-treesitter/nvim-treesitter" },
     },
     config = function()
-      require("orgmode").setup_ts_grammar()
+      -- require("orgmode").setup_ts_grammar()
       require("nvim-treesitter.configs").setup({
         highlight = {
           enable = true,

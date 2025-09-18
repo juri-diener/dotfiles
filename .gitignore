@@ -5,3 +5,6 @@
 .vim-bookmarks
 zsh/.zsh_sessions/
 zsh/.zsh_history
+**/.env
+**/.env**
+.env

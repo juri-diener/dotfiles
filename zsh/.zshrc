@@ -2,6 +2,16 @@
 # source "$HOME/.config/zsh/.zshrc"
 #!/bin/sh
 export ZDOTDIR=$HOME/.config/zsh
+
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home/
+
+export ANDROID_HOME=$HOME/Library/Android/sdk/
+export PATH=$PATH:$ANDROID_HOME/emulator/
+export PATH=$PATH:$ANDROID_HOME/platform-tools/
+export PATH=$PATH:$HOME/Library/Android/sdk/tools
+export PATH=$PATH:$HOME/Library/Android/sdk/tools/bin
+
+
 HISTFILE=~/.zsh_history
 setopt appendhistory
 

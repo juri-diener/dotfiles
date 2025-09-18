@@ -35,7 +35,7 @@ wezterm.on("gui-startup", function()
 		workspace = "react_native",
 	})
 	react_native_tab:set_title("react-native")
-	react_native_pane:split({ direction = "Right", size = 0.1, cwd = home .. "/Projects/react-native/" })
+	react_native_pane:split({ direction = "Bottom", size = 0.1, cwd = home .. "/Projects/react-native/" })
 	react_native_tab:activate()
 	react_native_pane:activate()
 
@@ -94,7 +94,9 @@ config.scrollback_lines = 70000
 config.font = wezterm.font("JetBrainsMono Nerd Font")
 config.font_size = 12.5
 config.adjust_window_size_when_changing_font_size = false
-config.color_scheme = "Gruvbox dark, medium (base16)"
+-- config.color_scheme = "Gruvbox dark, medium (base16)"
+-- config.color_scheme = "Gruvbox dark, medium (base16)"
+config.color_scheme = 'Rosé Pine (base16)'
 
 -- config.window_background_image = '/path/to/wallpaper.jpg'
 config.window_background_opacity = 1.0
@@ -147,22 +149,22 @@ config.keys = {
 	{
 		key = "LeftArrow",
 		mods = "SHIFT",
-		action = act.AdjustPaneSize({ "Left", 5 }),
+		action = act.AdjustPaneSize({ "Left", 3 }),
 	},
 	{
 		key = "DownArrow",
 		mods = "SHIFT",
-		action = act.AdjustPaneSize({ "Down", 5 }),
+		action = act.AdjustPaneSize({ "Down", 3 }),
 	},
 	{
 		key = "UpArrow",
 		mods = "SHIFT",
-		action = act.AdjustPaneSize({ "Up", 5 }),
+		action = act.AdjustPaneSize({ "Up", 3 }),
 	},
 	{
 		key = "RightArrow",
 		mods = "SHIFT",
-		action = act.AdjustPaneSize({ "Right", 5 }),
+		action = act.AdjustPaneSize({ "Right", 3 }),
 	},
 	{
 		key = "0",

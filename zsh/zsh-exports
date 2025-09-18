@@ -30,3 +30,17 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+
+# Android SDK configuration
+export ANDROID_SDK_ROOT=/opt/homebrew/share/android-commandlinetools/
+export ANDROID_HOME=/opt/homebrew/share/android-commandlinetools/
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+
+# General
+export EDITOR="nvim"
+export TERMINAL="wezterm"
+export BROWSER="brave"
+export QT_QPA_PLATFORMTHEME=qt5ct

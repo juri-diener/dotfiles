@@ -1,14 +1,13 @@
 return {
   -- { "ellisonleao/gruvbox.nvim" },
-  { "rebelot/kanagawa.nvim" },
+  -- { "rebelot/kanagawa.nvim" },
+  { "RRethy/base16-nvim" },
 
   -- Configure LazyVim to load colorscheme
   {
     "LazyVim/LazyVim",
     opts = {
-      -- colorscheme = "gruvbox",
-      -- colorscheme = "kanagawa-wave",
-      colorscheme = "kanagawa-dragon",
+      colorscheme = "base16-rose-pine",
     },
   },
 }
