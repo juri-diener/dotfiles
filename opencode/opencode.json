@@ -9,6 +9,10 @@
       "*rm*": "deny",
       "*rmdir*": "deny",
       "*del*": "deny",
+      "amplify*": "deny",
+      "git*": "ask",
+      "grep": "allow",
+      "glob": "allow",
       "*": "allow"
     }
   }
