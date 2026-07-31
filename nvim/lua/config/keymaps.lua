@@ -34,3 +34,33 @@ keymap("n", "<leader>,", ":silent grep ", { silent = false })
 
 -- Don't yank on put
 vim.api.nvim_set_keymap("x", "p", 'p<cmd>let @+=@0<CR><cmd>let @"=@0<CR>', opts)
+
+local typescript = require("functions.typescript_typecheck")
+vim.keymap.set(
+  "n",
+  "<leader>xp",
+  typescript.pick_tsconfig_and_run,
+  { desc = "Choose tsconfig.json and run TypeScript check" }
+)
+
+local eslint = require("functions.eslint_quickfix")
+vim.keymap.set("n", "<leader>xl", eslint.pick_folder_and_run, { desc = "Choose folder and run ESLint quickfix" })
+
+vim.keymap.set("n", "<leader>qf", function()
+  vim.ui.input({ prompt = "Filter quickfix by: " }, function(pattern)
+    if pattern and pattern ~= "" then
+      local qflist = vim.fn.getqflist()
+      local filtered = {}
+
+      for _, item in ipairs(qflist) do
+        if string.match(item.text:lower(), pattern:lower()) then
+          table.insert(filtered, item)
+        end
+      end
+
+      vim.fn.setqflist({}, " ", { title = "Filtered: " .. pattern, items = filtered })
+      vim.cmd("copen")
+      vim.notify(#filtered .. " items after filter '" .. pattern .. "'", vim.log.levels.INFO)
+    end
+  end)
+end, { desc = "Filter quickfix by string" })

@@ -1,10 +1,32 @@
+# macOS
 .DS_Store
+
+# zsh runtime state (regenerated)
+zsh/.zsh_sessions/
+zsh/.zsh_history
+zsh/.zcompdump
+zsh/.zcompdump.*
+
+# npm/amplify update-notifier cache
+configstore/
+
+# opencode generated / backups
+opencode/node_modules/
+opencode/package.json
+opencode/bun.lock
+opencode/package-lock.json
+opencode/*.bak
+
+# nvim backup
+nvim.bak/
+
+# session / bookmarks
 *.session
 *.history
 */session
 .vim-bookmarks
-zsh/.zsh_sessions/
-zsh/.zsh_history
+
+# env
 **/.env
 **/.env**
 .env

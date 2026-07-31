@@ -30,7 +30,7 @@ autoload -Uz compinit
 zstyle ':completion:*' menu select
 # zstyle ':completion::complete:lsof:*' menu yes select
 zmodload zsh/complist
-# compinit
+compinit
 _comp_options+=(globdots)		# Include hidden files.
 
 autoload -U up-line-or-beginning-search
@@ -82,8 +82,6 @@ bindkey -r "^d"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f $ZDOTDIR/completion/_fnm ] && fpath+="$ZDOTDIR/completion/"
 # export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
-compinit
-
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
 # bindkey '^e' edit-command-line

@@ -4,23 +4,6 @@ local wezterm = require("wezterm")
 local act = wezterm.action
 local mux = wezterm.mux
 
--- wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
--- 	local numpanes = ""
--- 	if #tab.panes > 1 then
--- 		numpanes = "(" .. tostring(#tab.panes) .. ") "
--- 	end
--- 	return numpanes .. tab.active_pane.title
--- end)
---
--- -- format window title
--- wezterm.on("format-window-title", function(tab, pane, tabs, panes, config)
--- 	local numtabs = ""
--- 	if #tabs > 1 then
--- 		numtabs = "(" .. tostring(#tabs) .. ") "
--- 	end
--- 	return numtabs .. tab.active_pane.title
--- end)
-
 wezterm.on("gui-startup", function()
 	local home = os.getenv("HOME")
 	local react_tab, react_pane, react_window = mux.spawn_window({
@@ -73,6 +56,8 @@ end)
 -- This table will hold the configuration.
 local config = {}
 config.audible_bell = "Disabled"
+config.send_composed_key_when_left_alt_is_pressed = true
+config.send_composed_key_when_right_alt_is_pressed = true
 
 -- In newer versions of wezterm, use the config_builder which will
 -- help provide clearer error messages
@@ -96,7 +81,7 @@ config.font_size = 12.5
 config.adjust_window_size_when_changing_font_size = false
 -- config.color_scheme = "Gruvbox dark, medium (base16)"
 -- config.color_scheme = "Gruvbox dark, medium (base16)"
-config.color_scheme = 'Rosé Pine (base16)'
+config.color_scheme = "Rosé Pine (base16)"
 
 -- config.window_background_image = '/path/to/wallpaper.jpg'
 config.window_background_opacity = 1.0
@@ -245,6 +230,7 @@ config.keys = {
 			end),
 		}),
 	},
+	{ key = "p", mods = "LEADER", action = act.PaneSelect({ mode = "SwapWithActive" }) },
 }
 
 -- to switsch to a tab on pressing leader+num

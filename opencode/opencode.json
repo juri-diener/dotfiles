@@ -1,7 +1,9 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "theme": "system",
   "autoupdate": true,
+  "skills": {
+    "paths": ["~/.config/skills"]
+  },
   "permission": {
     "bash": {
       "*install*": "deny",
@@ -13,7 +15,26 @@
       "git*": "ask",
       "grep": "allow",
       "glob": "allow",
+      "npx tsc*": "allow",
+      "npx eslint*": "allow",
+      "npm run lint*": "allow",
       "*": "allow"
+    }
+  },
+  "mcp": {
+    "mobile-mcp": {
+      "type": "local",
+      "command": ["npx", "@mobilenext/mobile-mcp@latest"],
+      "enabled": true
+    },
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp"
+    },
+    "sentry": {
+      "type": "remote",
+      "url": "https://mcp.sentry.dev/mcp",
+      "oauth": {}
     }
   }
 }

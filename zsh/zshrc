@@ -97,4 +97,11 @@ setxkbmap -option caps:escape
 # swap escape and caps
 # setxkbmap -option caps:swapescape
 
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[-s "/opt/homebrew/opt/nvim/nvm.sh"] && \. "/opt/homebrew/opt/nvim/nvm.sh"
 
+autoload -U add-zsh-hook
+load-nvmrc() { [ -f .nvmrc ] && nvm use --silent; }
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
