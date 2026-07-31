@@ -15,6 +15,7 @@ Personal skills for AI coding agents. Loaded by **opencode** (via `skills.paths`
 | critique | pbakaus/impeccable |
 | delight | pbakaus/impeccable |
 | distill | pbakaus/impeccable |
+| eas-observe | expo/skills |
 | eas-workflows | expo/skills |
 | expo-data-fetching | expo/skills |
 | expo-dev-client | expo/skills |
