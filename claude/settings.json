@@ -1,0 +1,86 @@
+{
+  "permissions": {
+    "ask": [
+      "Bash(rm *)",
+      "Bash(npm install *)",
+      "Bash(npm uninstall *)",
+      "Bash(npx install *)",
+      "Bash(npx uninstall *)"
+    ]
+  },
+  "model": "opus",
+  "statusLine": {
+    "type": "command",
+    "command": "~/.config/claude/statusline-command.sh"
+  },
+  "enabledPlugins": {
+    "expo@claude-plugins-official": true,
+    "sentry@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "thedotmack": {
+      "source": {
+        "source": "github",
+        "repo": "thedotmack/claude-mem"
+      }
+    }
+  },
+  "theme": "dark",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"/Users/juridiener/.claude/helpers/graft-hooks.cjs\" post-edit",
+            "timeout": 10000
+          }
+        ]
+      },
+      {
+        "matcher": "Bash|mcp__graft__|Read|Grep|Glob",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"/Users/juridiener/.claude/helpers/graft-hooks.cjs\" tool-savings",
+            "timeout": 8000
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"/Users/juridiener/.claude/helpers/graft-hooks.cjs\" prompt",
+            "timeout": 15000
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"/Users/juridiener/.claude/helpers/graft-hooks.cjs\" session-start",
+            "timeout": 8000
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"/Users/juridiener/.claude/helpers/graft-hooks.cjs\" stop",
+            "timeout": 8000
+          }
+        ]
+      }
+    ]
+  }
+}
